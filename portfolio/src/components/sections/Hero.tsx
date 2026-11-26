@@ -17,15 +17,17 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="order-2 md:order-1"
         >
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-indigo-500">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent-500">
             Hello, I'm
           </p>
-         <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl">
-  {PROFILE.firstName} {PROFILE.lastName}
-</h1>
-<h2 className="mt-3 text-xl font-medium text-slate-600 dark:text-slate-300 sm:text-2xl">
-  {PROFILE.title}
-</h2>
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl">
+            <span className="bg-gradient-to-r from-accent-500 to-pink-500 bg-clip-text text-transparent">
+              {PROFILE.firstName} {PROFILE.lastName}
+            </span>
+          </h1>
+          <h2 className="mt-3 text-xl font-medium text-slate-600 dark:text-slate-300 sm:text-2xl">
+            {PROFILE.title}
+          </h2>
           <p className="mt-6 max-w-lg text-slate-600 dark:text-slate-400">
             I'm a beginner frontend developer who builds responsive,
             accessible websites with React, TypeScript and Tailwind CSS.
@@ -38,7 +40,7 @@ export default function Hero() {
             </Button>
           </div>
 
-        <SocialLinks className="mt-8" />
+          <SocialLinks className="mt-8" />
         </motion.div>
 
         <motion.div
@@ -47,9 +49,14 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="order-1 flex justify-center md:order-2"
         >
-          {/* Placeholder: replace with your real photo later */}
-          <div className="flex h-56 w-56 items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 sm:h-72 sm:w-72">
-            <User size={96} className="text-white/80" />
+          <div className="relative">
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 rounded-full bg-gradient-to-br from-accent-500 to-pink-500 opacity-40 blur-3xl"
+            />
+            <div className="relative flex h-56 w-56 items-center justify-center rounded-full bg-gradient-to-br from-accent-500 to-pink-500 sm:h-72 sm:w-72">
+              <User size={96} className="text-white/80" />
+            </div>
           </div>
         </motion.div>
       </div>

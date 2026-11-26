@@ -2,12 +2,44 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  /* Fonts */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  /* Accent colour: change these 3 lines to recolour the whole site */
+  --color-accent-400: #c084fc;
+  --color-accent-500: #a855f7;
+  --color-accent-600: #9333ea;
+
+  /* Greys with a soft purple tint */
+  --color-slate-50: #faf7ff;
+  --color-slate-100: #f3edfb;
+  --color-slate-200: #e5dbf3;
+  --color-slate-300: #cbbde3;
+  --color-slate-400: #a090bd;
+  --color-slate-500: #7a6a98;
+  --color-slate-600: #5d4d79;
+  --color-slate-700: #43355c;
+  --color-slate-800: #2d2142;
+  --color-slate-900: #1c1033;
+  --color-slate-950: #120a22;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 :focus-visible {
-  outline: 2px solid #6366f1;
+  outline: 2px solid var(--color-accent-500);
   outline-offset: 2px;
 }
 
