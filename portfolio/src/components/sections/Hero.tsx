@@ -3,7 +3,7 @@ import { User } from 'lucide-react'
 import Button from '../ui/Button'
 import SocialLinks from '../ui/SocialLinks'
 import { PROFILE } from '../../data/profile'
-
+import TypingText from '../ui/TypingText'
 export default function Hero() {
   return (
     <section
@@ -25,9 +25,9 @@ export default function Hero() {
               {PROFILE.firstName} {PROFILE.lastName}
             </span>
           </h1>
-          <h2 className="mt-3 text-xl font-medium text-slate-600 dark:text-slate-300 sm:text-2xl">
-            {PROFILE.title}
-          </h2>
+         <h2 className="mt-3 text-xl font-medium text-slate-600 dark:text-slate-300 sm:text-2xl">
+  <TypingText words={PROFILE.roles} />
+</h2>
           <p className="mt-6 max-w-lg text-slate-600 dark:text-slate-400">
             I'm a beginner frontend developer who builds responsive,
             accessible websites with React, TypeScript and Tailwind CSS.
@@ -50,10 +50,7 @@ export default function Hero() {
           className="order-1 flex justify-center md:order-2"
         >
           <div className="relative">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 rounded-full bg-gradient-to-br from-accent-500 to-pink-500 opacity-40 blur-3xl"
-            />
+           
             <div className="relative flex h-56 w-56 items-center justify-center rounded-full bg-gradient-to-br from-accent-500 to-pink-500 sm:h-72 sm:w-72">
               <User size={96} className="text-white/80" />
             </div>

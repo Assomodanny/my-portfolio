@@ -6,4 +6,5 @@ export const PROFILE = {
   email: 'healerthe27@gmail.com',
   // WhatsApp number in international format, digits only (no + or spaces)
   whatsapp: '08155343682',
+  roles: ['Frontend Developer', 'React & TypeScript Developer', 'Responsive Web Builder'],
 }

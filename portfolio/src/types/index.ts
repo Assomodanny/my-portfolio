@@ -24,8 +24,8 @@ export interface Project {
   description: string
   image?: string
   technologies: string[]
-  demoUrl: string
-  repoUrl: string
+  demoUrl?: string
+  repoUrl?: string
 }
 
 export interface Service {

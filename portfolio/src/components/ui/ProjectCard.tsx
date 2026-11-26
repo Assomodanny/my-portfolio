@@ -41,16 +41,22 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </ul>
 
-        <div className="mt-6 flex gap-3">
-          <Button href={demoUrl} size="sm" external>
-            <ExternalLink size={14} />
-            Live Demo
-          </Button>
-          <Button href={repoUrl} size="sm" variant="outline" external>
-            <GithubIcon size={14} />
-            GitHub
-          </Button>
-        </div>
+       {(demoUrl || repoUrl) && (
+  <div className="mt-6 flex gap-3">
+    {demoUrl && (
+      <Button href={demoUrl} size="sm" external>
+        <ExternalLink size={14} />
+        Live Demo
+      </Button>
+    )}
+    {repoUrl && (
+      <Button href={repoUrl} size="sm" variant="outline" external>
+        <GithubIcon size={14} />
+        GitHub
+      </Button>
+    )}
+  </div>
+)}
       </div>
     </article>
   )
